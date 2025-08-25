@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joshua Tree Senior Living Residency Agreement - DocuSign-Like Digital Signature with Saved Date</title>
+  <style>
+    :root {
+      --primary-color: #000;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--primary-color);
+      background: #fff;
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .signature-adoption {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 40px;
+      background: #f9f9f9;
+    }
+
+    .signature-section {
+      margin: 30px 0;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .signature-pad, .display-signature {
+      border: 2px solid var(--primary-color);
+      border-radius: 4px;
+      width: 100%;
+      height: 200px;
+      background: #f9f9f9;
+      touch-action: none;
+    }
+
+    .signature-pad {
+      cursor: pointer;
+    }
+
+    .clear-button {
+      display: inline-block;
+      font-size: 18px;
+      color: var(--primary-color);
+      text-decoration: underline;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .apply-button, #adopt-button {
+      background-color: var(--primary-color);
+      border: none;
+      padding: 10px 20px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+
+    .submit-button {
+      width: 100%;
+      background-color: var(--primary-color);
+      border: none;
+      padding: 15px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      margin-top: 40px;
+      border-radius: 4px;
+    }
+
+    input[type="date"] {
+      font-size: 18px;
+      padding: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .signature-pad, .display-signature {
+        height: 150px;
+      }
+    }
+
+    a, button {
+      touch-action: manipulation;
+    }
+  </style>
+</head>
+<body>
+  <form class="signature-pad-form">
+    <div class="signature-adoption">
+      <h2>Adopt Your Signature and Date</h2>
+      <p>Draw your signature below and set a date. These will be saved and can be applied to all sections.</p>
+      <canvas id="adopt-signature-pad" class="signature-pad" width="400" height="200"></canvas>
+      <p><a id="clear-adopt" class="clear-button" data-target="adopt-signature-pad">Clear</a></p>
+      <input type="date" id="adopt-date" style="margin-top: 10px;">
+      <button id="adopt-button" type="button">Adopt and Save Signature & Date</button>
+    </div>
+
+    <h1>JOSHUA TREE SENIOR LIVING LLC</h1>
+    <p>8736 E Joshua Tree Lane, Scottsdale, AZ 85250</p>
+    <p>(P): 602.622.0623 // (F): 602.794.6690 // (E): info@seniorazliving.com</p>
+
+    <h2>RESIDENCY AGREEMENT</h2>
+    <p>This is an agreement between:</p>
+    <p>JOSHUA TREE SENIOR LIVING LLC</p>
+    <p>And:</p>
+    <p>____________________________________________________________________</p>
+    <p>who asserts that he/she is legally empowered to incur and discharge and conduct the personal and legal affairs of:</p>
+    <p>___________________________________________________________________</p>
+    <p>hereafter known as the Resident.</p>
+
+    <h2>1. JOSHUA TREE SENIOR LIVING LLC shall provide the following:</h2>
+    <p>1.1 Lodging: private room, semi-private room</p>
+    <p>1.2 Three nutritious meals daily and in between nourishment or snacks</p>
+    <p>1.3 Laundry services and housekeeping</p>
+    <p>1.4 Assistance with bathing, dressing, feeding, ambulation, administering prescribed medications as required/needed</p>
+    <p>1.5 Observation, care and supervision, as required</p>
+    <p>1.6 Activities encouraging mental and sensory stimulation, and physical exercise</p>
+    <p>1.7 Recreational activities and supplies including daily newspaper, current magazines, and other reading materials.</p>
+    <p>1.8 Inform family and/or appropriate agency and/or physician of client’s needs or change in health status</p>
+    <p>1.9 Staff is not awake at night (not a requirement per AZDHS Rules & Regulations), although, caregiver does do every 2 hours safety checks on our directed care residents. Staff will ensure that resident has a call bell next to their bed and are able to reach it to call for help. If the resident is unable to call for help (due to confusion, etc.) bed alarms will be used to alert the staff when the resident attempts to get up.</p>
+
+    <div class="signature-section">
+      <p><b>Resident/POA Signature:</b></p>
+      <canvas class="display-signature" id="sig-page1" width="400" height="200"></canvas>
+      <button class="apply-button" data-target="sig-page1" type="button">Apply Signature & Date</button>
+      <p><a class="clear-button" data-target="sig-page1">Clear</a></p>
+      <p><b>Date:</b> <input type="date" name="date-page1" readonly></p>
+      <p>Page 1 of 6</p>
+    </div>
+
+    <h2>2. Financial Responsibilities</h2>
+    <p>2.1 JOSHUA TREE SENIOR LIVING LLC’s PER DAY RATE includes items listed in 1.1 to 1.9.</p>
+    <p>2.2 JOSHUA TREE SENIOR LIVING LLC charges a 5% OF (30 DAYS X PER DAY RATE) each day payment is late. Other CHARGES MAY OCCUR IF: damages to property caused by the resident, excluding normal wear and tear. For example, broken windows, doors, furniture, light fixtures, damaged wall paneling, painting of walls, molding, drapes/curtains etc. caused by an acting out or abnormal behavior of the resident. Any outstanding costs for beautician services, medical supplies, nutritional supplements, incontinence garments, clothing, medications, personal toiletries or any item or service charges incurred by the facility at the request of the resident or resident’s representative on the resident’s behalf.</p>
+    <p>2.3 JOSHUA TREE SENIOR LIVING LLC may terminate residency of a resident without notice if: The resident exhibits behavior that is an immediate threat to the health and safety of the resident or other individuals in the assisted living facility.</p>
+    <p>2.4 JOSHUA TREE SENIOR LIVING LLC may terminate residency of a resident after providing 14 days written notice to the resident or the representative for 1 of the following reasons:</p>
+    <p>a. Documentation of failure to pay fees or charges.</p>
+    <p>b. The individual requires continuous medical services, nursing services unless the assisted living facility complies with A.R.S. § 36-401 (C) or behavioral health services.</p>
+    <p>c. The individual is not within the assisted living facility’s scope of services and the assisted living facility does not have the ability to provide the assisted living services needed by the individual and/or a home health agency or hospice service company is not involved in the care of the individual.</p>
+    <p>d. The individual requires restraints, including the use of bedrails.</p>
+    <p>e. The resident’s care and service needs exceed the services the assisted living facility is licensed to provide.</p>
+    <p>f. The primary condition for which the individual needs assisted living services is a behavioral health issue.</p>
+    <p>2.5 JOSHUA TREE SENIOR LIVING LLC shall provide a 30-day written notice before the effective date of any change in a fee or charge. A 30-day written notice of increase in fees shall not be provided to a resident whose service needs change, as documented in the resident’s service plan. A family conference will be arranged to inform resident/representative of new changes in level of care and new fees. The new rate becomes effective when the resident’s level of care changes. The resident will be re-evaluated after each hospital visit and the monthly rate can/will be increased immediately.</p>
+    <p>2.6 JOSHUA TREE SENIOR LIVING LLC shall not terminate residency of a resident without providing the resident or the representative 30 days written notice, except as provided by subsection 2.3 and 2.4.</p>
+    <p>2.7 A resident or the representative may terminate residency of a resident after providing a 14-day written notice to the facility for documentation of the facility’s failure to comply with the resident’s service plan or residency agreement, although the deposit will not be refunded. The deposit shall be retained if the resident/representative fails to provide the facility with a 30-day intent to move.</p>
+    <p>2.8 The resident must reside in the assisted living facility for a minimum of 18 MONTHS and follow the Grievance Procedure for the deposit to be refunded. Should the resident join the assisted living facility through a placement or referral agency, the deposit will be applied as a non-refundable fee.</p>
+    <p>2.9 If a resident is away for an extended time (e.g., hospitalization or rehab), the full monthly rate (30 days X Day Rate) still applies without proration. Upon return, if health needs have changed, the daily rate will be adjusted to reflect the level of care required.</p>
+    <p>2.10 The deposit will not be refunded if:</p>
+    <p>a. If the residency agreement is terminated prior to 18 months minimum stay and/or if the resident/resident representative does not follow the steps in section 2.11 to receive a full refund of the deposit; the deposit will be retained.</p>
+    <p>b. If the resident expires within the home, hospital, hospice unit, etc. the agreement is automatically terminated. A 30-day or 14-day notice is no longer required. The deposit is not refundable.</p>
+    <p>c. If the resident is to receive end of life/hospice care in the Residential Assisted Living home, the deposit is no longer refundable.</p>
+    <p>d. If the resident is to be transferred to another facility, or expire within the residential assisted living home, hospital, hospice unit, etc. Or for any other reason; the facility will not provide a full, partial, or prorated refund of the monthly charges/rent for termination of this agreement. The deposit will be retained.</p>
+    <p>2.11 To receive a full refund of the deposit (deposits will be refunded within 30 days of termination):</p>
+    <p>a. The Grievance Procedure must be followed; if the issue cannot be resolved then the resident/resident representative may provide a physical letter or email with a 30-day notice intent to move-out.</p>
+    <p>b. The 30-day notice of intent to move-out should be given alongside the monthly rent check. If the 30-day notice of intent to move-out is given after the start of the monthly rent, the 30-day notice begins from the start of the date the notice was sent out. Example: the monthly rent is due on the 1st of every month; the notice was given on the 5th of the month; the resident/resident representative is required to pay the following month as well to receive the deposit or else the deposit is forfeited.</p>
+    <p>c. Upon termination of residency, the facility shall provide a written statement, including disposition of resident’s property, accounting of all fees, or deposits owed to the resident and an accounting of any deduction from fees and deposits.</p>
+
+    <div class="signature-section">
+      <p><b>Resident/POA Signature:</b></p>
+      <canvas class="display-signature" id="sig-page2" width="400" height="200"></canvas>
+      <button class="apply-button" data-target="sig-page2" type="button">Apply Signature & Date</button>
+      <p><a class="clear-button" data-target="sig-page2">Clear</a></p>
+      <p><b>Date:</b> <input type="date" name="date-page2" readonly></p>
+      <p>Page 2 of 6</p>
+    </div>
+
+    <p>2.12 JOSHUA TREE SENIOR LIVING LLC does not assume any responsibilities in handling any of the resident’s financial affairs. Financial affairs are the responsibility of the Resident and the POA.</p>
+    <p>2.13 JOSHUA TREE SENIOR LIVING LLC shall not be responsible for any lost, damaged, or stolen items that the resident has at the facility. Please do not bring any items of value, ie. jewelry, money, clothing, furniture, personal items, etc. without manager’s approval and documentation of receipt.</p>
+    <p>2.14 The management and staff assume no liability for injuries or other occurrences while the resident is away from the facility. Individuals taking residents from the facility will be requested to sign in and out.</p>
+    <p>2.15 The company and its employees are not responsible for falls, accidents, or injury to a resident in the home, outdoor, or anywhere on the premises and therefore the resident and resident representative hereby release to not sue and hold harmless JOSHUA TREE SENIOR LIVING LLC, its staff, agents, and representatives, of and from all liabilities, claims actions, damages, costs, or expenses of any kind arising out of or relating thereto.</p>
+
+    <h2>3. Resident or Responsible Party shall:</h2>
+    <p>3.1 Pay the total amount consisting of the prorated 1st month, the deposit and the administration fee. Applicable fees are non-refundable within the first 18 months.</p>
+    <p>3.2 Have the option to/not to purchase any of the additional services such as the Flu vaccine or the like (excluding Care Plan/Service Plan and TB Test).</p>
+    <p>3.3 Cooperate with the general policies, home rules of the facility, physician orders, etc.</p>
+    <p>3.4 Not bring or administer medications and/or alcoholic beverages into the facility without the knowledge of the owner or manager or staff members.</p>
+    <p>3.5 Not be destructive of the facility or other resident’s property.</p>
+    <p>3.6 Provide a 30-day written notification of intent to move from the facility.</p>
+    <p>3.7 Over-the-counter medications, supplements, and special diet supplies (such as Ensure or Boost) are to be provided by the resident or their representative. The daily rate includes standard personal care items such as incontinence supplies, hairbrush, tissues, toothbrush, toothpaste, soap, shampoo, conditioner (if used), and lotions. Any specialty or unique toiletries requested by the resident are not included.</p>
+    <p>3.8 Provide the facility a copy of the resident’s medical power of attorney, living will or advanced directives.</p>
+    <p>3.9 Provide general medical history and negative TB chest/skin test results.</p>
+    <p>3.10 The resident’s representative shall address any unsatisfactory conduct to the manager as soon as possible. The manager or authorized staff shall take information relating to the event, speak with involved parties, write a written report and provide solutions to the situation. If unable to provide solutions, a social service agency shall be contacted for assistance.</p>
+
+    <h2>4. Optional Services</h2>
+    <p>The following services are available for additional charges or free of charge as notated:</p>
+    <p>4.1 Podiatrist visit (usually covered by the resident’s medical insurance) at an additional charge</p>
+    <p>4.2 Mobile Dentistry visit (usually covered by the resident’s dental/medical insurance) at an additional charge</p>
+    <p>4.3 Beautician Services (haircuts, blow-outs, styling, manicure) will be free of charge</p>
+    <p>4.4 Beautician Services (permanent wave, color treatment, pedicure) at an additional charge</p>
+
+    <div class="signature-section">
+      <p><b>Resident/POA Signature:</b></p>
+      <canvas class="display-signature" id="sig-page3" width="400" height="200"></canvas>
+      <button class="apply-button" data-target="sig-page3" type="button">Apply Signature & Date</button>
+      <p><a class="clear-button" data-target="sig-page3">Clear</a></p>
+      <p><b>Date:</b> <input type="date" name="date-page3" readonly></p>
+      <p>Page 3 of 6</p>
+    </div>
+
+    <h2>5. Authorization to Take Photographs & Video</h2>
+    <p>JOSHUA TREE SENIOR LIVING LLC is authorized to take photographs and videos of the Resident for security and identification for their medical care or related purposes during the Resident stay at said facility. The Resident and Resident’s Representative authorizes photographs and or video to be taken for marketing development and Web site and/or newsletter for enhanced communication between Resident and family members.</p>
+
+    <h2>6. Authorization for Release of Information and Collect Information</h2>
+    <p>JOSHUA TREE SENIOR LIVING LLC is granted authorization to release such personal, medical and confidential information regarding the Resident as may be required or necessary for the due care and treatment of the Resident. However, any such release is undertaken in accordance with the policies of the JOSHUA TREE SENIOR LIVING LLC, and applicable law. JOSHUA TREE SENIOR LIVING LLC is hereby released from any and all legal liability that may arise from the release of this information for this purpose. JOSHUA TREE SENIOR LIVING LLC will not release Resident’s Private Health Care Information to any parties for any other reason without proper written authorization. JOSHUA TREE SENIOR LIVING LLC is also authorized to request and collect any and all information to assist in quality improvement and risk analysis for the facility and the overall benefits of the community and its residents.</p>
+
+    <h2>7. Examination of Records</h2>
+    <p>The Resident and Resident’s Representative acknowledge that the Department of Health Services or any other State licensing agency may inspect Resident’s residency and care records as part of an evaluation of JOSHUA TREE SENIOR LIVING LLC.</p>
+
+    <div class="signature-section">
+      <p><b>Resident/POA Signature:</b></p>
+      <canvas class="display-signature" id="sig-page4" width="400" height="200"></canvas>
+      <button class="apply-button" data-target="sig-page4" type="button">Apply Signature & Date</button>
+      <p><a class="clear-button" data-target="sig-page4">Clear</a></p>
+      <p><b>Date:</b> <input type="date" name="date-page4" readonly></p>
+      <p>Page 4 of 6</p>
+    </div>
+
+    <h2>8. CARE Rates</h2>
+    <p>Resident and/or their legal representative acknowledge that JOSHUA TREE SENIOR LIVING LLC is not a “nursing care facility” and does not provide all of the services and interventions that a nursing care facility may offer. Resident continues to be under the care and direction of their own physician as identified in this agreement and attachments.</p>
+    <p>The per day rate is based on the type and amount of care required by the Resident as described on the Resident Health Forms and Service Plan.</p>
+    <p>Should the Resident’s condition change requiring more care or a level of service out of the scope of JOSHUA TREE SENIOR LIVING LLC the per day rate may increase, or the Resident may be referred to a facility where appropriate care is available.</p>
+    <p>The prorated 1st month’s fee is due upon move-in. The administrative fee and deposit are due prior/upon move-in. The deposit is not refundable prior to 18 months of the resident residing in the care home. ALL RESIDENTS RECEIVING HOSPICE CARE WILL BE BILLED ON A MONTHLY NON-REFUNDABLE BASIS.</p>
+    <p>Upon admission, payment shall include the following:</p>
+    <p>The fee is due on the 1st of each month.</p>
+    <p>PER DAY RATE: $____________________</p>
+    <p>Prorated First Month:____ DAYS X ________ / DAY RATE $____________________</p>
+    <p>Deposit: 30 DAYS X THE PER DAY RATE $____________________</p>
+    <p>One-time NON-REFUNDABLE administrative fee: $ 1500.00 (Room hold for up to 7 business days, final clean up)</p>
+    <p>TOTAL DUE BEFORE MOVE-IN $____________________</p>
+    <p>MOVE-IN DATE: ______________________</p>
+    <p>**Notes:_____________________________________________________</p>
+    <p>________________________________________________________</p>
+    <p>________________________________________________________</p>
+
+    <div class="signature-section">
+      <p><b>Resident/POA Signature:</b></p>
+      <canvas class="display-signature" id="sig-page5" width="400" height="200"></canvas>
+      <button class="apply-button" data-target="sig-page5" type="button">Apply Signature & Date</button>
+      <p><a class="clear-button" data-target="sig-page5">Clear</a></p>
+      <p><b>Date:</b> <input type="date" name="date-page5" readonly></p>
+      <p>Page 5 of 6</p>
+    </div>
+
+    <h2>9. Grievances</h2>
+    <p>Step 1 A resident or resident’s representative shall explain in writing the grievance to the manager.</p>
+    <p>a. The written grievance will include the clause of the grievance and provide a suggested remedy. A grievance must be brought within 10 working days from the day the decision; service or lack of service was observed.</p>
+    <p>b. The manager, either alone or in collaboration with the licensee (owner), if the two positions are distinct and separate, shall reach a decision and communicate it in writing to the resident or the resident’s representative within 10 working days of receipt of the written grievance.</p>
+    <p>c. Every effort should be made to settle grievances at this stage.</p>
+    <p>Step 2 If the resident or resident’s representative feel the decision of the manager and/or licensee is still unfair, the resident or the resident’s representative shall respond in writing within 10 working days, requesting reconsideration of the issue:</p>
+    <p>a. The response should again offer suggestions on what would be considered a fair compromise of the situation.</p>
+    <p>b. The manager shall then form a committee of three individuals including the manager, the individual who developed the service plan (if different from the manager) or a nurse and another individual affiliated with the facility i.e. resident, caregiver, volunteer, to meet together and review the grievance.</p>
+    <p>c. The manager will make a written reply of the committee’s decision to the resident or the resident’s representative second written response within 10 working days.</p>
+    <p>d. The resident or resident’s representative may choose to be present during the committee meeting to represent the case of the resident.</p>
+    <p>Step 3 If the resident or resident’s representative still feel that the decision of management has not resolved the problems, he or she should seek outside counsel through the Arizona Department of Health Services office of Home and Community Based Licensure or through the DES Long Term Care Ombudsmen or any other persons or resident advocacy agencies.</p>
+    <p>Any reply which is not appealed by the resident or the resident’s representative within the time allowed at each level shall be considered settled and binding on the part of the resident or resident’s representative and the facility.</p>
+
+    <h2>10. Right of Entry</h2>
+    <p>For safety and comfort, JOSHUA TREE SENIOR LIVING LLC’s staff persons are permitted to enter Resident’s room to perform basic housekeeping services, respond to emergencies, make repairs and improvements, and perform other management functions, as we deem necessary or advisable. In addition, because the facility is licensed under the Arizona assisted living laws, any duly authorized agent of the Department of Health Services may, upon stating the purpose of the visit, enter and inspect any licensed portion of the facility, including Resident’s room, without advance notice. JOSHUA TREE SENIOR LIVING LLC shall also have the right to show the room to prospective residents at any reasonable time during the thirty 30-day period prior to the termination date for this Agreement. Whenever feasible, staff will attempt to give Resident reasonable notice before entering their room.</p>
+
+    <h2>12. Parties to this Agreement</h2>
+    <p>Upon admission, the resident and/or responsible party’s signing the Admission Agreement, Home Rules, Resident’s Rights, Evacuation Procedures Orientation, Current Internal Facility Requirements Information, and Current Phone Numbers of various social service agencies, indicate that the resident/responsible party have received, read, and understood all contractual material.</p>
+    <p>I, the Resident/POA, read and understood this Residency Agreement thoroughly.</p>
+    <p>I, the Resident/POA, have been given an opportunity to ask questions, which have been explained to my satisfaction.</p>
+
+    <div class="signature-section">
+      <p><b>Facility Manager/Owner/Administrator Signature:</b></p>
+      <p>______________________________ Date: ______________</p>
+      <p><b>Resident/POA Signature:</b></p>
+      <canvas class="display-signature" id="sig-page6" width="400" height="200"></canvas>
+      <button class="apply-button" data-target="sig-page6" type="button">Apply Signature & Date</button>
+      <p><a class="clear-button" data-target="sig-page6">Clear</a></p>
+      <p><b>Date:</b> <input type="date" name="date-page6" readonly></p>
+      <p>Page 6 of 6</p>
+    </div>
+
+    <button class="submit-button" type="submit">SUBMIT SIGNED AGREEMENT</button>
+  </form>
+
+  <script>
+    const form = document.querySelector('.signature-pad-form');
+    const adoptCanvas = document.getElementById('adopt-signature-pad');
+    const adoptCtx = adoptCanvas.getContext('2d');
+    const clearAdopt = document.getElementById('clear-adopt');
+    const adoptButton = document.getElementById('adopt-button');
+    const adoptDateInput = document.getElementById('adopt-date');
+    const applyButtons = document.querySelectorAll('.apply-button');
+    const clearButtons = document.querySelectorAll('.clear-button');
+    let writingMode = false;
+
+    adoptCtx.lineWidth = 3;
+    adoptCtx.lineJoin = adoptCtx.lineCap = 'round';
+
+    const getCursorPosition = (event, canvas) => {
+      const rect = canvas.getBoundingClientRect();
+      const positionX = (event.clientX || event.touches[0].clientX) - rect.left;
+      const positionY = (event.clientY || event.touches[0].clientY) - rect.top;
+      return [positionX, positionY];
+    };
+
+    const handlePointerDown = (event) => {
+      event.preventDefault();
+      writingMode = true;
+      adoptCtx.beginPath();
+      const [positionX, positionY] = getCursorPosition(event, adoptCanvas);
+      adoptCtx.moveTo(positionX, positionY);
+    };
+
+    const handlePointerUp = () => {
+      writingMode = false;
+    };
+
+    const handlePointerMove = (event) => {
+      event.preventDefault();
+      if (!writingMode) return;
+      const [positionX, positionY] = getCursorPosition(event, adoptCanvas);
+      adoptCtx.lineTo(positionX, positionY);
+      adoptCtx.stroke();
+    };
+
+    adoptCanvas.addEventListener('mousedown', handlePointerDown);
+    adoptCanvas.addEventListener('mouseup', handlePointerUp);
+    adoptCanvas.addEventListener('mouseleave', handlePointerUp);
+    adoptCanvas.addEventListener('mousemove', handlePointerMove);
+
+    adoptCanvas.addEventListener('touchstart', handlePointerDown);
+    adoptCanvas.addEventListener('touchend', handlePointerUp);
+    adoptCanvas.addEventListener('touchcancel', handlePointerUp);
+    adoptCanvas.addEventListener('touchmove', handlePointerMove);
+
+    clearAdopt.addEventListener('click', (event) => {
+      event.preventDefault();
+      adoptCtx.clearRect(0, 0, adoptCanvas.width, adoptCanvas.height);
+    });
+
+    adoptButton.addEventListener('click', () => {
+      if (!adoptDateInput.value) {
+        alert('Please select a date before adopting!');
+        return;
+      }
+      const dataURL = adoptCanvas.toDataURL('image/png');
+      const adoptedDate = adoptDateInput.value;
+      localStorage.setItem('adoptedSignature', dataURL);
+      localStorage.setItem('adoptedDate', adoptedDate);
+      alert('Signature and date adopted and saved!');
+    });
+
+    applyButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.dataset.target;
+        const targetCanvas = document.getElementById(targetId);
+        const targetCtx = targetCanvas.getContext('2d');
+        const targetDateInput = targetCanvas.parentElement.nextElementSibling.nextElementSibling.querySelector('input[type="date"]');
+        const savedSignature = localStorage.getItem('adoptedSignature');
+        const savedDate = localStorage.getItem('adoptedDate');
+        if (savedSignature && savedDate) {
+          const img = new Image();
+          img.onload = () => {
+            targetCtx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
+            targetCtx.drawImage(img, 0, 0, targetCanvas.width, targetCanvas.height);
+          };
+          img.src = savedSignature;
+          targetDateInput.value = savedDate;
+        } else {
+          alert('Please adopt a signature and date first!');
+        }
+      });
+    });
+
+    clearButtons.forEach(button => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetId = button.dataset.target;
+        const targetCanvas = document.getElementById(targetId);
+        const targetCtx = targetCanvas.getContext('2d');
+        const targetDateInput = targetCanvas.parentElement.nextElementSibling.nextElementSibling.querySelector('input[type="date"]');
+        targetCtx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
+        targetDateInput.value = '';
+      });
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const signatures = [];
+      const displayCanvases = document.querySelectorAll('.display-signature');
+      displayCanvases.forEach(canvas => {
+        signatures.push(canvas.toDataURL('image/png'));
+      });
+      // For demonstration: log signatures
+      console.log('Signatures:', signatures);
+      const dates = {
+        page1: form.querySelector('[name="date-page1"]').value,
+        page2: form.querySelector('[name="date-page2"]').value,
+        page3: form.querySelector('[name="date-page3"]').value,
+        page4: form.querySelector('[name="date-page4"]').value,
+        page5: form.querySelector('[name="date-page5"]').value,
+        page6: form.querySelector('[name="date-page6"]').value,
+      };
+      console.log('Dates:', dates);
+      alert('Agreement signed and submitted! In a real application, this would send the signed document to the facility.');
+    });
+
+    // Set default date to today
+    const today = new Date().toISOString().split('T')[0];
+    adoptDateInput.value = today;
+    document.querySelectorAll('input[type="date"]').forEach(input => {
+      if (input !== adoptDateInput) input.value = today;
+    });
+  </script>
+</body>
+</html>
